@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cambio</title>
+        <meta charset="utf-8" lang="pt-br">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
+    <body>
+        <h1>Cotação do Câmbio</h1>
+        
+        <br>
+        
+        <label for="listademoedas">Moeda: </label>
+        <select id="listademoedas"></select>
+        
+        <br>
+        <br>
+
+        <div id="ultimacotacao">
+            <p id="moeda"></p>
+            <p id="ultima"></p>
+            <p id="data"></p>
+            <p id="vlminimo"></p>
+            <p id="vlmaximo"></p>
+            <p id="vlfechamento"></p>
+        </div>
+        
+        <br>
+
+        <label for="dataum">Período de: </label>
+        <input type="date" id="dataum">
+        <label for="datadois"> até: </label>
+        <input type="date" id="datadois">
+        <button id="buscar">Buscar</button>
+
+        <br>
+        <br>
+
+        <table>
+            
+            <tr>
+                <th>Moeda</th>
+                <th>Data</th>
+                <th>Valor Min.</th>
+                <th>Valor Max.</th>
+                <th>Valor Fech.</th>
+            </tr>
+
+            <tbody id="resultado"></tbody>
+                            
+            </table>
+            <br>
+
+            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+
+        <script src="cambio.js"></script>
+    </body>
+</html>
